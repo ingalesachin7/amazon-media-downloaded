@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Product Video Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+        </svg>
+        <span>Amazon Downloader</span>
+      </div>
+      <span class="badge">Pro</span>
+    </header>
+
+    <div id="not-amazon" class="status-card hidden">
+      <p>Please open an Amazon product page to extract media.</p>
+    </div>
+
+    <div id="media-content" class="hidden">
+      <!-- Section: Videos -->
+      <section class="section">
+        <div class="section-title">
+          <h3>Videos Found</h3>
+          <span id="video-count" class="count-tag">0</span>
+        </div>
+        <div id="video-container" class="media-grid"></div>
+      </section>
+
+      <!-- Section: Main Images -->
+      <section class="section">
+        <div class="section-title">
+          <h3>Product Images</h3>
+          <span id="image-count" class="count-tag">0</span>
+        </div>
+        <div id="image-container" class="media-grid"></div>
+      </section>
+    </div>
+
+    <div id="loader" class="loader-container">
+      <div class="spinner"></div>
+      <p>Scanning page media...</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
